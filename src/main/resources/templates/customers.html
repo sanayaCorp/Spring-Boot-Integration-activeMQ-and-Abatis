@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Rest API with Spring Boot</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(customers)}">
+        <h2>Product List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Currency</th>
+                <th>Balance</th>
+                <th>View</th>
+                <th>Edit</th>
+            </tr>
+            <tr th:each="customer : ${customers}">
+                <td th:text="${customer.no}"><a href="/customer/${customer.no}">No</a></td>
+                <td th:text="${customer.name}">Product Id</td>
+                <td th:text="${customer.address}">descirption</td>
+                <td th:text="${customer.gender}">gender</td>
+                <td th:text="${customer.dob}">dob</td>
+                <td th:text="${customer.currency}">currency</td>                
+                <td th:text="${customer.balance}">balance</td>
+                <td><a th:href="${ '/customer/' + customer.no}">View</a></td>
+                <td><a th:href="${'/customer/edit/' + customer.no}">Edit</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

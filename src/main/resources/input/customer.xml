@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root>
+    <Customer>
+        <name>John Doe</name>
+	<address city="Sydney" postal="2060">181, Miller Street</address>
+	<Gender>M</Gender>
+	<DOB>01-01-1971</DOB>
+	<Currency>AUD</Currency>
+	<Balance>9.9</Balance>
+    </Customer>
+</root>
